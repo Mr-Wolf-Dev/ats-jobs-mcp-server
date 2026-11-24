@@ -1,0 +1,77 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "jobId": { "type": "string", "description": "Unique canonical job ID (provider:slug:id)." },
+      "provider": { "type": "string", "description": "ATS provider (greenhouse, lever, ashby, smartrecruiters)." },
+      "companySlug": { "type": "string", "description": "ATS company board slug." },
+      "companyName": { "type": "string", "description": "Company display name." },
+      "title": { "type": "string", "description": "Job title." },
+      "department": { "type": ["string", "null"], "description": "Department or team." },
+      "location": { "type": "string", "description": "Job location." },
+      "workplaceType": { "type": "string", "description": "remote, hybrid, onsite, or unknown." },
+      "isRemote": { "type": "boolean", "description": "Whether the role supports remote work." },
+      "employmentType": { "type": ["string", "null"], "description": "Employment type (e.g. FullTime)." },
+      "seniority": { "type": "string", "description": "Inferred seniority level." },
+      "salaryMin": { "type": ["number", "null"], "description": "Minimum annual salary." },
+      "salaryMax": { "type": ["number", "null"], "description": "Maximum annual salary." },
+      "salaryCurrency": { "type": ["string", "null"], "description": "ISO 4217 currency code." },
+      "postedAt": { "type": ["string", "null"], "description": "Publication date (YYYY-MM-DD)." },
+      "jobUrl": { "type": "string", "description": "Public job posting URL." },
+      "applyUrl": { "type": ["string", "null"], "description": "Direct application URL." },
+      "description": { "type": ["string", "null"], "description": "Optional plain-text job description." }
+    },
+    "required": [
+      "jobId",
+      "provider",
+      "companySlug",
+      "companyName",
+      "title",
+      "location",
+      "workplaceType",
+      "isRemote",
+      "seniority",
+      "jobUrl"
+    ]
+  },
+  "views": {
+    "overview": {
+      "title": "Jobs Overview",
+      "transformation": {
+        "fields": [
+          "companyName",
+          "provider",
+          "title",
+          "department",
+          "location",
+          "workplaceType",
+          "seniority",
+          "salaryMin",
+          "salaryMax",
+          "salaryCurrency",
+          "postedAt",
+          "jobUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "companyName": { "label": "Company", "format": "text" },
+          "provider": { "label": "ATS", "format": "text" },
+          "title": { "label": "Title", "format": "text" },
+          "department": { "label": "Department", "format": "text" },
+          "location": { "label": "Location", "format": "text" },
+          "workplaceType": { "label": "Workplace", "format": "text" },
+          "seniority": { "label": "Seniority", "format": "text" },
+          "salaryMin": { "label": "Salary Min", "format": "number" },
+          "salaryMax": { "label": "Salary Max", "format": "number" },
+          "salaryCurrency": { "label": "Currency", "format": "text" },
+          "postedAt": { "label": "Posted", "format": "date" },
+          "jobUrl": { "label": "URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

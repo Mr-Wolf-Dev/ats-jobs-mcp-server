@@ -1,0 +1,20 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Tech & Startup Jobs Scraper Output",
+  "description": "Normalized job postings and hiring signals extracted from Greenhouse, Lever, Ashby, and SmartRecruiters.",
+  "type": "object",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Jobs Overview",
+      "description": "Table view of normalized ATS job postings.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "dataset": {
+      "type": "string",
+      "title": "Full Jobs Dataset (JSON)",
+      "description": "Complete JSON dataset of normalized ATS jobs.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

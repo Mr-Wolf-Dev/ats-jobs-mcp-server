@@ -1,0 +1,32 @@
+{
+  "name": "ats-jobs-mcp-server",
+  "displayName": "Tech & Startup Jobs Scraper (Greenhouse, Lever, Ashby, SmartRecruiters)",
+  "version": "0.1.0",
+  "vendor": "mrWolf",
+  "description": "Streamable HTTP MCP server & Apify Actor for extracting normalized tech jobs, salaries, remote roles, and B2B hiring intent signals from Greenhouse, Lever, Ashby, and SmartRecruiters.",
+  "homepage": "https://apify.com/mr.wolf/ats-jobs-mcp-server",
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://mr-wolf-1--ats-jobs-mcp-server.apify.actor/mcp",
+    "authentication": {
+      "type": "bearer",
+      "header": "Authorization",
+      "prefix": "Bearer "
+    }
+  },
+  "tools": [
+    {
+      "name": "search_ats_jobs",
+      "description": "Search and filter normalized tech/startup jobs across Greenhouse, Lever, Ashby, and SmartRecruiters."
+    },
+    {
+      "name": "get_company_jobs",
+      "description": "Fetch all active normalized jobs for a single company ATS board."
+    },
+    {
+      "name": "detect_hiring_signals",
+      "description": "Analyze B2B hiring intent across ATS boards (remote ratio, salary transparency, breakdown by company, department, and seniority)."
+    }
+  ],
+  "categories": ["jobs", "lead-generation", "business", "search"]
+}

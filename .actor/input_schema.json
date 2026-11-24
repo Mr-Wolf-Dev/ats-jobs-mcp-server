@@ -1,0 +1,63 @@
+{
+  "title": "Tech & Startup Jobs Scraper (Greenhouse, Lever, Ashby, SmartRecruiters + MCP) Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "boards": {
+      "title": "ATS Company Boards",
+      "type": "array",
+      "description": "List of company boards in 'provider:slug' format (e.g. greenhouse:stripe, lever:spotify, ashby:openai, smartrecruiters:BoschGroup) or full ATS board URLs.",
+      "editor": "stringList",
+      "prefill": ["greenhouse:stripe", "lever:spotify", "ashby:openai"],
+      "default": []
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "Filter jobs whose title, department, or description contains any of these keywords.",
+      "editor": "stringList",
+      "default": []
+    },
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "Filter jobs matching any of these location substrings (e.g. Remote, London, San Francisco).",
+      "editor": "stringList",
+      "default": []
+    },
+    "departments": {
+      "title": "Departments",
+      "type": "array",
+      "description": "Filter jobs matching any of these department substrings (e.g. Engineering, Sales, AI).",
+      "editor": "stringList",
+      "default": []
+    },
+    "remoteOnly": {
+      "title": "Remote Only",
+      "type": "boolean",
+      "description": "Only return jobs marked as remote-friendly.",
+      "default": false
+    },
+    "postedAfter": {
+      "title": "Posted After (YYYY-MM-DD)",
+      "type": "string",
+      "description": "Only include jobs published on or after this ISO date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "includeDescription": {
+      "title": "Include Full Description",
+      "type": "boolean",
+      "description": "Include plain-text job description in output (increases dataset size).",
+      "default": false
+    },
+    "maxItems": {
+      "title": "Maximum Items",
+      "type": "integer",
+      "description": "Maximum number of normalized jobs to return (1–2000).",
+      "minimum": 1,
+      "maximum": 2000,
+      "prefill": 25,
+      "default": 100
+    }
+  }
+}

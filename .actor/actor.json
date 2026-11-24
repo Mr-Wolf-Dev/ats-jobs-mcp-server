@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "ats-jobs-mcp-server",
+  "title": "Tech & Startup Jobs Scraper (ATS + MCP Server)",
+  "description": "HTTP-only Apify Actor & Standby MCP Server extracting normalized tech jobs, salaries, remote roles, and B2B hiring signals from Greenhouse, Lever, Ashby, and SmartRecruiters.",
+  "version": "0.1",
+  "usesStandbyMode": true,
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}
