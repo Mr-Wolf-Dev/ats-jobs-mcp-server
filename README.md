@@ -1,5 +1,7 @@
 # Tech & Startup Jobs Scraper (Greenhouse, Lever, Ashby, SmartRecruiters + MCP)
 
+[![Mr-Wolf-Dev/ats-jobs-mcp-server MCP server](https://glama.ai/mcp/servers/Mr-Wolf-Dev/ats-jobs-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/Mr-Wolf-Dev/ats-jobs-mcp-server)
+
 Extract, filter, and normalize **live tech & startup job postings**, **salary ranges**, **remote roles**, and **B2B hiring intent signals** directly from **Greenhouse**, **Lever**, **Ashby**, and **SmartRecruiters** — available both as an **HTTP-only Apify Actor** and as a **Standby MCP Server** for AI agents.
 
 Designed for **Pay-Per-Event (PPE)** cost efficiency with **zero headless browsers** and **no proxies required** (runs smoothly on **256 MB RAM**).
