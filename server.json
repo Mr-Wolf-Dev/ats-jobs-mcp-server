@@ -2,12 +2,12 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Mr-Wolf-Dev/ats-jobs-mcp-server",
   "title": "Tech & Startup Jobs Scraper (ATS + MCP Server)",
-  "description": "HTTP-only Apify Actor & Standby MCP Server extracting normalized tech jobs, salaries, remote roles, ",
+  "description": "Open roles from Greenhouse, Lever, Ashby and SmartRecruiters in one schema, plus hiring signals.",
   "repository": {
     "url": "https://github.com/Mr-Wolf-Dev/ats-jobs-mcp-server",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "remotes": [
     {
       "type": "streamable-http",
